@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    color: #fff;
+}
+section{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background:#121321;
+    transform: translate(-150, -100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+section::before{
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    transform: translate(-150px, -100px);
+    border-radius: 50%;
+    background: linear-gradient(90deg, #9c27b0, #fff);
+
+}
+
+section::after{
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    background: linear-gradient(90deg, #9c27b0, #fff);
+    border-radius: 50%;
+    transform: translate(150px, 100px);
+
+} 
+.container{
+    position: relative;
+    height: 250px;
+    width: 375px;
+    z-index: 100;
+    padding: 25px;
+    transition: 2s;
+    transform-style: preserve-3d;
+}
+.container .card{
+    background: rgba(255, 255, 255, 10%);
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    z-index: 99;
+    border-radius: 25px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.25);
+    backdrop-filter: blur(50px);
+    border: 1px solid rgba(255,255,255,0.2);
+    position: absolute;
+    backface-visibility: hidden;
+}
+.container:hover{
+    transform: rotateY(180deg);
+}
+
+.front-page .logo img{
+    width: 48px;
+    margin-right: 10px;
+}
+.card-details .name-number h5{
+    font: 16px;
+    font-weight: 550;
+    color: #fff;
+}
+.front-page header,
+.front-page .logo{
+    display: flex;
+    align-items: center;
+}
+.front-page header{
+    justify-content: space-between;
+}
+
+.front-page .chip{
+    width: 50px;
+}
+
+.front-page .card-details{
+    display: flex;   
+    justify-content: space-between;
+    margin-top: 40px; 
+    align-items: flex-end;
+}
+h6{
+    font-size: 10px;
+    font-weight: 400;
+    color: #fff;
+}
+h5.number{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+h5.name{
+    margin-top: 20px;
+}
+ 
+.card.backface{
+    border: none;
+    padding: 15px 25px 25px 25px;
+    transform: rotateY(180deg);
+    
+}
+.card.backface h6{
+    font-size: 7px;
+}
+.card.backface .magnetic-stip{
+    position: absolute;
+    height: 45px;
+    width: 100%;
+    background: #000;
+    left: 0;
+    top: 40px ;
+}
+.card.backface .signature{
+    margin-top: 80px;
+    height: 40px;
+    width: 85%;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: repeating-linear-gradient(
+        #fff,
+        #fff 3px,
+        #d8dfd9 0px,
+        #d3d4da 9px
+    );
+
+
+}
+.card.backface i{
+    color: #000;
+    font-size: 12px;
+    margin-right: -30px;
+    padding: 4px 6px;
+    background-color: #fff;
+    border-radius: 4px;
+    z-index: -1;
+    
+}
+
+.card.backface h5{
+    font-size: 8px;
+    margin-top: 10px;
+    font-weight: 200;
+}

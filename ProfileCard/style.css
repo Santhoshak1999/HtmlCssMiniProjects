@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 
+
 body{
     height: 100vh;
     display: flex;
@@ -23,13 +24,14 @@ body{
     border-radius: 20px;
     box-shadow: 0 5px 10px rgba(0,0,0,0);
     padding: 25px;
+    position: relative;
 }
 .image {
   position: relative;
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  background-color: brown;
+  background-color: #3070f4;;
   padding: 2px;
 }
 .image .profile-img {
@@ -117,4 +119,14 @@ border-right: 2px solid rgb(238, 231, 231);
 }
 .data:last-child{
     border-right: none;
+}
+.profile-card::before{
+    content: "";
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    background-color: #3070f4;
+    display: flex;
+    top: 0;
+    border-radius: 20px 20px 0 0;
 }
