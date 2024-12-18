@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.main_box{
+  position: relative;
+  background: url(side.jpg) left no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+
+}
+.main_box .sidebar_menu{
+  position: fixed;
+  height: 100vh;
+  width: 280px;
+  transition: all 0.4s ease-in-out;
+  left: -285px;
+  background: rgba(255, 255, 255,  0.1);
+  box-shadow: 0px 0 6px rgba(191, 145, 145, 0.8);
+}
+
+.sidebar_menu .logo{
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 0 6px rgba(191, 145, 145, 0.8);
+}
+.sidebar_menu .logo a{
+  color: #fff;
+  font-size: 28px;
+  font-weight: 15px;
+  position: absolute;
+  left: 50px;
+  line-height: 60px;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+.sidebar_menu .menu{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+
+}
+
+.sidebar_menu .menu li{
+  margin-top: 6px;
+  padding: 14px 40px;
+
+}
+.sidebar_menu .menu i{
+  color: #fff;
+  margin-right: 8px;
+  font-size: 20px;
+  padding-right: 8px;
+}
+.sidebar_menu .menu a{
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+.sidebar_menu .menu li:hover{
+    box-shadow: 0 0 6px rgba(255, 254, 254, 0.8);
+    border-left: 1px solid white;
+    transition: all 0.2s linear;
+
+} 
+.sidebar_menu .social_media{
+  position: absolute;
+  left: 15%;
+  bottom: 20px;
+}
+.sidebar_menu .social_media a{
+  padding: 0 5px;
+  color: #fff;
+  font-size: 20px;
+  opacity: 0.6;
+  transition: all 0.2s linear;
+}
+.sidebar_menu .social_media a:hover{
+  opacity: 1; 
+}
+#check{
+  /* 
+  display: none; removes the element from the layout, while 
+  visibility: hidden; hides the element but keeps its space in the layout. */
+    display: none;
+
+}
+
+.main_box .btn_one i{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 16px;
+  line-height: 60px;
+  cursor:pointer;
+  opacity: 1;
+  z-index: 9;
+  transition: all 0.3s linear;
+
+}
+.main_box .btn_two i{
+  font-size: 25px;
+  line-height: 60px;
+  position: absolute;
+  left: 240px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.3s linear;
+
+}
+.btn_one i:hover{
+  font-size: 29px;
+}
+
+#check:checked ~.sidebar_menu{
+  left: 0px;
+  transition: all 0.4s linear;
+}
+#check:checked ~.btn_one{
+  opacity: 0;
+}
