@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    height: 100vh;
+    width: 100%;
+    background: url("images/background.png") no-repeat;
+    background-position: center;    
+}
+header nav{
+    position: fixed;
+    width: 90%;
+}
+nav .navbar{
+    width: 90%;
+    margin: 20px auto 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.navbar .logo{
+    height: 80px;
+    width: 150px;
+}
+.navbar .logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.navbar .menu{
+    display: flex;
+    
+}
+.navbar .menu li{
+    list-style-type: none;
+    margin: 0 10px;
+}
+.menu li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(10, 10, 73);
+    padding: 8px;
+    border-radius: 5px;
+}
+.menu li a:hover{
+    color: rgb(91, 8, 8);
+    transition: all 1s;
+    background-color: rgba(35, 91, 91, 0.134);
+}
+/* .navbar .search-box{
+    position: relative;
+    height: 50px;
+    width: 990px;
+} */
+
+.search-box input{
+    height: 25px;
+    border-radius: 20px;
+    padding-left: 12px;
+}
