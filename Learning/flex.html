@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .bold{
+        font-weight: bold;
+    }
+    .flex-container{
+        background: linear-gradient(to right, rgb(80, 122, 207) 10%, rgb(196, 98, 98) 90%);
+        display: flex;
+    }
+    .item
+    {
+        box-sizing: border-box;
+        background-color: antiquewhite;
+        border: 3px solid rgba(0, 0, 0, 0.329);
+        padding: 5px;
+        margin: 3px;
+    }
+    .header{
+        font-size: 18px;
+        font-weight: 800;
+    }
+    code{
+        text-decoration: underline;   
+    }
+
+
+    /* css for flex-flow property */
+    .container{
+        display: flex;
+        background: linear-gradient(to right, rgb(117, 117, 190) 10%, rgb(191, 70, 70) 90%);
+        flex-flow: row wrap;
+    }
+    .container > div {
+        min-width: 10%;
+        max-width: 11%;
+        height: 10%;
+        text-align: center;
+        border: 2px solid blue;
+        color: white;
+
+        background : linear-gradient(to left, rgba(73, 210, 23, 0.49), rgba(200, 191, 22, 0.712))
+    }
+
+</style>
+<body>
+    <h2>What is FlexBox ?</h2>
+    <p>Flexbox is a loayout method for arranging items or columns.</p>
+    <h3>Flexbox vs Grid</h3>
+    <p>The CSS Flexbox Layout should be used for one-dimensional layout, with rows OR columns.</p>
+    <p>The <a href="https://www.w3schools.com/css/css_grid.asp">CSS Grid Layout</a> should be used for 2-Dimentional layout, with rows and columns</p>
+    <br>
+    <h3><u>The Flexbox components</u></h3>
+    <div class="componets">
+        <div class="title">
+            <p>A flexbox always consists of:</p>
+        </div>
+        <div class="lists">
+            <ul>
+                <li>a <i class="bold">Flex Container</i> - the parent(container) <code>&lt;div&gt;</code> element</li>
+                <li><i class="bold">Flex Items</i> - items inside the container</li>
+            </ul>
+        </div>
+    </div>
+    <div class="header">
+        <h3>A flex Container with 3 flex Items</h3>
+    </div>
+    <div class="flex-container">
+        <div class="item">Item-1</div>
+        <div class="item">Item-2</div>
+        <div class="item">Item-3</div>
+    </div> 
+    <ul>
+        <li>A Flixible Layout must have a parent element with the 
+            <em><code>display</code></em> property set to <em><code>flex</code></em>
+        </li>
+        <li>Direct child element(s) of the flexible container
+            automatically becomes flexible items
+        </li>
+    </ul>
+    <br>
+    <h2>The CSS Properties we use fo rthe flex container are: </h2>
+    <div class="flex-properties">
+        <ul>
+            <li><code>flex-direction</code></li>
+            <li><code>flex-wrap</code></li>
+            <li><code>flex-flow</code></li>
+            <li><code>justify-content</code></li>
+            <li><code>align-items</code></li>
+            <li><code>align-content</code></li>
+        </ul>
+    </div>
+    <div class="header">
+        The CSS flex-direction
+    </div>
+    <div class="title">
+        <p>The <code>flex-direction</code> property specifies the <display-direction>of flex items
+            container</p>
+        <p>The <code>flex-direction</code> property can have one of the following values</p>
+        <div class="li">
+            <ul>
+                <div class="ul">
+                    <li><code>row</code></li>
+                    <li><code>column</code></li>
+                    <li><code>row-reverse</code></li>
+                    <li><code>column-reverse</code></li>
+                </div>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="header">The Css flex-wrap Property
+    </div>
+    <div class="title">
+        <p>The <code>flex-wrap</code> property specifies whether the flex items
+        should wrap or not, if there is not enough room for them on one flex line.</p>
+        <p>The <code>flex-wrap</code> property can have one of the following values:</p>
+    </div>
+    <div class="li">
+        <ul>
+            <div class="ul">
+                <li><code>nowrap</code></li>
+                <li><code>wrap</code></li>
+                <li><code>wrap-reverse</code></li>
+            </div>
+        </ul>
+    </div>
+
+    <div class="header">The CSS <code>flex-flow</code> Property</div>
+    <div class="title">
+        <p>The <code>flex-flow</code> property is a shorthand property for setting both the
+        <code>flex-direction</code> and <code>flex-wrap</code> properties.</p>
+    </div>
+    <!-- The flex-flow example -->
+    <div class="container">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+        <div class="item">item6</div>
+        <div class="item">item7</div>
+        <div class="item">item8</div>
+        <div class="item">item9</div>
+        <div class="item">item10</div>
+    </div>
+    <br>
+    <div class="header">
+        The CSS <code>justify-content</code> Property
+    </div>
+    <div class="title">
+        <p>The CSS <code>justify-content</code> property is used to 
+            align the flex items when they do not do not use all available
+            space on the main-axis(horizontally).
+        </p>
+    </div>
+    <p class="list-header">
+        The <code>justify-content</code> property can have one of te following
+        values:
+    </p>
+    <div class="li">
+        <ul><div class="ul">
+            <li><code>center</code></li>
+            <li><code>flex-start</code></li>
+            <li><code>flex-end</code></li>
+            <li><code>space-around</code></li>
+            <li><code>space-between</code></li>
+            <li><code>space-evenly</code></li>
+        </div>
+        </ul>
+    </div>
+    
+    
+</body>
+</html>
